@@ -122,8 +122,10 @@ public class HomePage {
 						System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
 						System.out.println("------------------------------------------------");
 }
-					default: 
-						System.out.println("Address Book is empty");
+					for(int i=0;i>=addressbook.size();i--) {
+					System.out.println("Address Book is empty");
+					}
+						
 				break;
 				case 5: //Clears address book
 					addressbook.clear();
