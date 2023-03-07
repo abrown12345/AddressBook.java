@@ -9,6 +9,7 @@ public class HomePage {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<Entries>addressbook=new ArrayList<>();
+		List<String>emails2= new ArrayList<>();
 		Scanner userInput= new Scanner(System.in);
 		Scanner scanner= new Scanner(System.in);
 		while(true) {
@@ -31,10 +32,16 @@ public class HomePage {
 					String PhoneNumber=Entry.nextLine();
 					System.out.println("Email Address:");
 					String EmailAddress=Entry.nextLine();
-					//Create object 
+					if(emails2.contains(EmailAddress)) {
+						System.out.println("Email Address already in addressbook");
+					}
+					else {
+					String emails= new String(EmailAddress);
 					Entries p1=new Entries(FirstName, LastName, PhoneNumber, EmailAddress);
 					addressbook.add(p1);
+					emails2.add(emails); 
 					System.out.println("Added new entry!");
+					}
 					break;
 				case 2:
 					System.out.println("Enter an entry's email to remove:");
@@ -121,11 +128,10 @@ public class HomePage {
 						System.out.println("Phone Number:" + addressbook.get(i).getPhoneNumber());		
 						System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
 						System.out.println("------------------------------------------------");
-}
-					for(int i=0;i>=addressbook.size();i--) {
-					System.out.println("Address Book is empty");
 					}
-						
+				for(int i=0;i>=addressbook.size();i--) {
+				System.out.println("Address Book is empty");
+				}
 				break;
 				case 5: //Clears address book
 					addressbook.clear();
