@@ -1,6 +1,5 @@
 package AddressBook;
 import java.util.Scanner;
-import java.util.jar.Attributes.Name;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,48 +70,67 @@ public class HomePage {
 							System.out.println("Enter First Name:");
 							String FirstName2=Entry2.nextLine();
 								for (int i=0; i<addressbook.size();i++) {
-									if(addressbook.get(i).getFirstName().equals(FirstName2)) {
+									if(addressbook.get(i).getFirstName().contains(FirstName2)) {
 										System.out.println("First Name: "+ addressbook.get(i).getFirstName());
 										System.out.println("Last Name: "+ addressbook.get(i).getLastName());
 										System.out.println("Phone Number: "+ addressbook.get(i).getPhoneNumber());		
 										System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
+										System.out.println("------------------------------------------------");
+
 							}
+									else {
+										System.out.println("No search found");
+									}
 							}
 							break;
 						case 2:
 							System.out.println("Enter Last Name");
 							String LastName2=Entry2.nextLine();
 							for (int i=0; i<addressbook.size();i++) {
-								if(addressbook.get(i).getLastName().equals(LastName2)) {
+								if(addressbook.get(i).getLastName().contains(LastName2)) {
 									System.out.println("First Name: "+ addressbook.get(i).getFirstName());
 									System.out.println("Last Name: "+ addressbook.get(i).getLastName());
 									System.out.println("Phone Number: "+ addressbook.get(i).getPhoneNumber());		
 									System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
+									System.out.println("------------------------------------------------");
+
 						}
+								else {
+									System.out.println("No search found");
+								}
 						}
 							break;
 						case 3:
 							System.out.println("Enter Phone Number");
 							String PhoneNumber2=Entry2.nextLine();
 							for (int i=0; i<addressbook.size();i++) {
-								if(addressbook.get(i).getPhoneNumber().equals(PhoneNumber2)) {
+								if(addressbook.get(i).getPhoneNumber().contains(PhoneNumber2)) {
 									System.out.println("First Name: "+ addressbook.get(i).getFirstName());
 									System.out.println("Last Name: "+ addressbook.get(i).getLastName());
 									System.out.println("Phone Number: "+ addressbook.get(i).getPhoneNumber());		
 									System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
+									System.out.println("------------------------------------------------");
+
 						}
+								else {
+									System.out.println("No search found");
+								}
 						}
 							break;
 						case 4: 
 							System.out.println("Enter Email Address");
 							String EmailAddress2=Entry2.nextLine();
 							for (int i=0; i<addressbook.size();i++) {
-								if(addressbook.get(i).getEmailAddress().equals(EmailAddress2)) {
+								if(addressbook.get(i).getEmailAddress().contains(EmailAddress2)) {
 									System.out.println("First Name: "+ addressbook.get(i).getFirstName());
 									System.out.println("Last Name: "+ addressbook.get(i).getLastName());
 									System.out.println("Phone Number: "+ addressbook.get(i).getPhoneNumber());		
 									System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
+									System.out.println("------------------------------------------------");
 						}
+								else {
+									System.out.println("No search found");
+								}
 						}
 							break;
 						default:
@@ -144,3 +162,4 @@ public class HomePage {
 }
 }
 }
+
