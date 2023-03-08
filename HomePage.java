@@ -47,7 +47,7 @@ public class HomePage {
 					Scanner Remove=new Scanner(System.in);
 					String EmailAddressRemove=Remove.nextLine();
 					System.out.println("You have removed the following entry:");
-					for (int i=0; i<addressbook.size()+1;i++) {//+1 to avoid out of bounds error
+					for (int i=0; i<addressbook.size();i++) {
 						if(addressbook.get(i).getEmailAddress().equals(EmailAddressRemove)) {
 							System.out.println(i);
 							System.out.println("First Name: "+ addressbook.get(i).getFirstName());
@@ -55,6 +55,7 @@ public class HomePage {
 							System.out.println("Phone Number: "+ addressbook.get(i).getPhoneNumber());		
 							System.out.println("Email: "+ addressbook.get(i).getEmailAddress());
 							addressbook.remove(i);
+							break;
 						}}
 					break;
 				case 3:
